@@ -22,8 +22,8 @@ activites_url = "https://www.strava.com/api/v3/athlete/activities"
 
 payload = {
     'client_id': "61095",
-    'client_secret': '1de0e629150b11cd86e2efec41c29caa9c7e7a1c',
-    'refresh_token': 'c1da8dd0ae1ef033e7f80ce1e60ece6de5a599a8',
+    'client_secret': 'SECRET',
+    'refresh_token': 'TOKEN,
     'grant_type': "refresh_token",
     'f': 'json'
 }
@@ -42,6 +42,8 @@ strava_all_cols = json_normalize(my_dataset)
 cols = ['name', 'distance','average_speed', 'moving_time', 'elapsed_time',
         'total_elevation_gain', 'id','achievement_count','start_date_local']
 all_data_cols = ['date', 'km', 'elapsed_time']
+
+# Read in old running data from the NIKE run app
 nike = pd.read_csv('/Users/valeredemelier/Downloads/Running CSV.csv', parse_dates=True, nrows=32)
 
 
